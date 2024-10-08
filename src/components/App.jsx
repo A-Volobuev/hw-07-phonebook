@@ -25,24 +25,11 @@ export default function App() {
     <Box
     bg="#66A5AD"
     display="flex"
-    flexDirection="column"
-    alignItems="center"
-    p="10px 0px 0px 0px"
+    justifyContent="space-evenly"
+    p="20px 20px 440px 20px"
     >
-      {isLoading && (
-        <PacmanLoader
-        color="#C4DFE6"
-        margin={10}
-        size={25}
-      />
-      )}
-
-      <Box     
-      width="90%"
-      p="20px 20px 430px 20px"
-      display="flex"
-      justifyContent="space-evenly">
         <FormContacts />
+
         <Box
         border="2px solid #003B46"
         borderRadius="5px"
@@ -53,11 +40,23 @@ export default function App() {
         justifyContent="start"
         bg="#C4DFE6"
         >
-          <ListTitle>Contacts</ListTitle>
+          <Box
+          display="grid"
+          width="310px"
+          gridTemplateColumns = "1fr 1fr"
+          p="0px 20px 0px 20px">
+            <ListTitle>Contacts</ListTitle>
+            {isLoading && (
+              <PacmanLoader
+              color="#66A5AD"
+              size={20}
+              />
+            )}
+          </Box>
+
           <Filter/>
           <ListContacts contacts={contacts}/>
         </Box>
-      </Box>
     </Box>
   );
 }
