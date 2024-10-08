@@ -4,8 +4,10 @@ import {FormField, FormItem, FormBtn, FormTitle, FormInput} from '../FormContact
 
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addContacts } from '../../redux/contactsOperation';
-import { selectContacts } from '../../redux/contactsSlice';
+
+// import { addContacts } from '../../redux/contactsOperation';
+// import { selectContacts } from '../../redux/contactsSlice';
+import { selectContacts, addContacts } from '../../redux';
 
 
 export default function FormContacts() {

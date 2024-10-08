@@ -3,8 +3,10 @@ import {Box} from '../../contents/Box';
 import { List, ListItem, DeleteBtn} from './ListContacts.styled';
 
 import {useDispatch, useSelector } from 'react-redux';
-import { selectFilter } from '../../redux/filterSlice';
-import { removeContacts } from '../../redux/contactsOperation';
+
+// import { selectFilter } from '../../redux/filterSlice';
+// import { removeContacts } from '../../redux/contactsOperation';
+import { removeContacts, selectFilter } from '../../redux';
 
 export const ListContacts = ({contacts}) => {
 	const dispatch = useDispatch();

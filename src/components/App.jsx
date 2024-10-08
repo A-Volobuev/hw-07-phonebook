@@ -7,9 +7,11 @@ import { Filter } from './Filter/Filter';
 import {ListTitle} from './App.styled';
 
 import { useSelector, useDispatch} from 'react-redux';
-import { selectContacts, isLoadingNow } from '../redux/contactsSlice'
-import { fetchContacts } from '../redux/contactsOperation';
 import PacmanLoader from "react-spinners/PacmanLoader";
+
+// import { selectContacts, isLoadingNow } from '../redux/contactsSlice'
+// import { fetchContacts } from '../redux/contactsOperation';
+import { selectContacts, isLoadingNow, fetchContacts } from '../redux'
 
 export default function App() {
   const contacts = useSelector(selectContacts);
